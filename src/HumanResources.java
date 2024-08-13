@@ -45,7 +45,7 @@ public class HumanResources {
         do {
             menu();
             System.out.print("Lựa chọn của bạn: ");
-            int choice = input.nextInt();
+            int choice = Integer.parseInt(input.nextLine());
             System.out.println();
 
             switch (choice) {
@@ -134,7 +134,7 @@ public class HumanResources {
             System.out.println("  [0] Quay lại!");
             System.out.println("  [1] Marketing \n  [2] Media \n  [3] Developer");
             System.out.print("Nhập số: ");
-            int chonBoPhan = input.nextInt();  // Nhập số
+            int chonBoPhan = Integer.parseInt(input.nextLine());  // Nhập số
 
             //Xét điệu kiện
             switch (chonBoPhan) {
@@ -194,7 +194,7 @@ public class HumanResources {
             System.out.println("  [1] Thêm nhân viên thông thường");
             System.out.println("  [2] Thêm nhân viên là cấp quản lý");
             System.out.print("Bạn chọn số: ");
-            int addElementChoice = input.nextInt();// Biến chứa lựa chọn chức năng
+            int addElementChoice = Integer.parseInt(input.nextLine());// Biến chứa lựa chọn chức năng
 
             // Xét điều kiện
             switch (addElementChoice) {
@@ -210,10 +210,10 @@ public class HumanResources {
                     String tenNV = input.next();
 
                     System.out.println("Nhập tuổi nhân viên: ");
-                    int tuoiNV = input.nextInt();
+                    int tuoiNV = Integer.parseInt(input.nextLine());
 
                     System.out.println("Nhập hệ số lương của nhân viên: ");
-                    int heSoLuong = input.nextInt();
+                    int heSoLuong = Integer.parseInt(input.nextLine());
 
                     System.out.println("Nhập ngày vào làm (DD/MM/YYYY): ");
                     String ngayVaoLam = input.next();
@@ -226,7 +226,7 @@ public class HumanResources {
                     do {
                         System.out.println("  (1) Marketing \n  (2) Media \n  (3) Developer");
                         System.out.print("Nhập số: ");
-                        int employeeJobChoice = input.nextInt();   // Chọn SỐ tương ứng với bộ phận làm việc
+                        int employeeJobChoice = Integer.parseInt(input.nextLine());   // Chọn SỐ tương ứng với bộ phận làm việc
 
                         switch (employeeJobChoice) {
                             case 1 -> {
@@ -247,10 +247,10 @@ public class HumanResources {
                     } while (employeeJobChoiceBoolean);
 
                     System.out.println("Nhập số ngày nghỉ phép: ");
-                    int soNgayNghiPhep = input.nextInt();
+                    int soNgayNghiPhep = Integer.parseInt(input.nextLine());
 
                     System.out.println("Nhập số giờ làm thêm : ");
-                    int soGioLamThem = input.nextInt();
+                    int soGioLamThem = Integer.parseInt(input.nextLine());
 
                     // Thêm vào ArrayList staffList (Mã và Tên của nhân viên sẽ được lower case)
                     staffList.add(new Employee(maNV.toLowerCase(), tenNV.toLowerCase(), tuoiNV, heSoLuong, ngayVaoLam, employeeJob, soNgayNghiPhep, soGioLamThem));
@@ -272,10 +272,10 @@ public class HumanResources {
                     String managerName = input.next();
 
                     System.out.println("Nhập tuổi quản lý: ");
-                    int managerAge = input.nextInt();
+                    int managerAge = Integer.parseInt(input.nextLine());
 
                     System.out.println("Nhập hệ số lương của quản lý: ");
-                    int managerSalaryScale = input.nextInt();
+                    int managerSalaryScale = Integer.parseInt(input.nextLine());
 
                     System.out.println("Nhập ngày vào làm của quản lý (DD/MM/YYYY): ");
                     String managerStartWorkedDay = input.next();
@@ -288,7 +288,7 @@ public class HumanResources {
                     do {
                         System.out.println("  (1) Marketing \n  (2) Media \n  (3) Developer");
                         System.out.print("Nhập số: ");
-                        int managerJobChoice = input.nextInt();   // Nhập SỐ tương ứng với bộ phận làm việc
+                        int managerJobChoice = Integer.parseInt(input.nextLine());   // Nhập SỐ tương ứng với bộ phận làm việc
 
                         switch (managerJobChoice) {
                             case 1 -> {
@@ -310,7 +310,7 @@ public class HumanResources {
 
 
                     System.out.println("Nhập số ngày nghỉ phép: ");
-                    int staffNumberOfDayOff = input.nextInt();
+                    int staffNumberOfDayOff = Integer.parseInt(input.nextLine());
 
                     System.out.println("Chọn chức danh: ");
                     String managerPosition = "";                  // Biến sẽ chuyển thành tên chức danh tương ứng
@@ -319,7 +319,7 @@ public class HumanResources {
                     do {
                         System.out.println("  (1) Business Leader \n  (2) Project Leader \n  (3) Technical Leader");
                         System.out.print("Nhập số: ");
-                        int managerPositionChoice = input.nextInt();  // Chọn số tương ứng với chức danh
+                        int managerPositionChoice = Integer.parseInt(input.nextLine());  // Chọn số tương ứng với chức danh
 
                         switch (managerPositionChoice) {
                             case 1 -> {
@@ -367,7 +367,7 @@ public class HumanResources {
             System.out.println("  [1] Tìm kiếm thông tin nhân viên theo tên");
             System.out.println("  [2] Tìm kiếm thông tin nhân viên theo mã nhân viên");
             System.out.print("Bạn chọn số: ");
-            int searchStaffChoice = input.nextInt();   // Nhập dữ liệu chứa lựa chọn của User
+            int searchStaffChoice = Integer.parseInt(input.nextLine());   // Nhập dữ liệu chứa lựa chọn của User
 
             // Để xét điều kiện
             switch (searchStaffChoice) {
@@ -430,7 +430,7 @@ public class HumanResources {
         }
     }
 
-    /* (NÂNG CAO) Chức năng 6 : Hiển thị bảng lương của nhân viên toàn công ty GIẢM DẦN */
+    /* Chức năng 6 : Hiển thị bảng lương của nhân viên toàn công ty GIẢM DẦN */
     public static void hienThiLuongTheoThuTuGiamDan() {
         // Dùng Comparator để sắp xếp ArrayList staffList (theo Giảm Dần)
         staffList.sort(Comparator.comparingInt(Staff::getEmployeeSalary).reversed());
@@ -441,7 +441,7 @@ public class HumanResources {
         System.out.println();
     }
 
-    /* (NÂNG CAO) Chức năng 7 : Hiển thị bảng lương của nhân viên toàn công ty TĂNG DẦN */
+    /* Chức năng 7 : Hiển thị bảng lương của nhân viên toàn công ty TĂNG DẦN */
     public static void hienThiLuongTheoThuTuTangDan() {
         // Dùng Comparator để sắp xếp ArrayList staffList (theo Tăng Dần)
         staffList.sort(Comparator.comparingInt(Staff::getEmployeeSalary));

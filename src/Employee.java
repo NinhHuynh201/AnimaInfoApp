@@ -17,8 +17,9 @@ public class Employee extends Staff {
 
 
     /* Getter + Setter */
-    public int getSoGioLamThem() {                     // int soGioLamThem
-        return soGioLamThem;
+    // int soGioLamThem
+    public int getSoGioLamThem() {
+        return soGioLamThem; 
     }
 
     public void setSoGioLamThem(int soGioLamThem) {
